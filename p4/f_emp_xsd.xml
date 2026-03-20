@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="style.xsl" type="text/xsl"?>
+
+<orgData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema>
+        <xs:element name="orgData">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="xsd_employeesData">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="xsd_employee" maxOccurs="unbounded">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="xsd_name" type="xs:string"/>
+                                            <xs:element name="xsd_department" type="xs:string"/>
+                                            <xs:element name="xsd_salary" type="xs:integer"/>
+                                            <xs:element name="xsd_JoiningDate" type="xs:date"/>
+                                        </xs:sequence>
+                                        <xs:attribute name="xsd_id" type="xs:string" use="required"/>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+    <employeesData>
+
+        <employee id="E_IT_01">
+            <name>Soham</name>
+            <department>IT</department>
+            <salary>$25000</salary>
+            <JoiningDate>25-01-2010</JoiningDate>
+        </employee>
+
+        <employee id="E_IT_02">
+            <name>ABC</name>
+            <department>IT</department>
+            <salary>$30000</salary>
+            <JoiningDate>12-03-2012</JoiningDate>
+        </employee>
+
+        <employee id="E_HR_01">
+            <name>PQR</name>
+            <department>HR</department>
+            <salary>$28000</salary>
+            <JoiningDate>08-07-2011</JoiningDate>
+        </employee>
+
+        <employee id="E_IT_03">
+            <name>XYZ</name>
+            <department>IT</department>
+            <salary>$32000</salary>
+            <JoiningDate>20-11-2014</JoiningDate>
+        </employee>
+
+        <employee id="E_HR_02">
+            <name>AAA</name>
+            <department>HR</department>
+            <salary>$29000</salary>
+            <JoiningDate>18-02-2016</JoiningDate>
+        </employee>
+
+        <employee id="E_IT_04">
+            <name>BBB</name>
+            <department>IT</department>
+            <salary>$40000</salary>
+            <JoiningDate>10-10-2008</JoiningDate>
+        </employee>
+
+    </employeesData>
+</orgData>

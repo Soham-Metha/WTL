@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>Scientific Calculator</h2>
+        <table>
+
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="display" readonly placeholder="0">
+                </td>
+            </tr>
+
+            <tr>
+                <td><button class="func" onclick="press('log(')">log</button></td>
+                <td><button class="back" onclick="backspace()">C</button></td>
+                <td colspan="2"><button class="ac" onclick="clearDisplay()">AC</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="const" onclick="press('pi ')">pi</button></td>
+                <td><button class="const" onclick="press('e ')">e</button></td>
+                <td><button class="op" onclick="press('(')">(</button></td>
+                <td><button class="op" onclick="press(')')">)</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="func" onclick="press('sqrt(')">sqrt</button></td>
+                <td><button class="func" onclick="press('sin(')">sin</button></td>
+                <td><button class="func" onclick="press('cos(')">cos</button></td>
+                <td><button class="func" onclick="press('tan(')">tan</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="op" onclick="press('!')">!</button></td>
+                <td><button class="op" onclick="press('^')">^</button></td>
+                <td><button class="op" onclick="press('%')">mod</button></td>
+                <td><button class="op" onclick="press('/')">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="num" onclick="press('7')">7</button></td>
+                <td><button class="num" onclick="press('8')">8</button></td>
+                <td><button class="num" onclick="press('9')">9</button></td>
+                <td><button class="op" onclick="press('*')">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="num" onclick="press('4')">4</button></td>
+                <td><button class="num" onclick="press('5')">5</button></td>
+                <td><button class="num" onclick="press('6')">6</button></td>
+                <td><button class="op" onclick="press('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="num" onclick="press('1')">1</button></td>
+                <td><button class="num" onclick="press('2')">2</button></td>
+                <td><button class="num" onclick="press('3')">3</button></td>
+                <td><button class="op" onclick="press('+')">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button class="num" onclick="press('00')">00</button></td>
+                <td><button class="num" onclick="press('0')">0</button></td>
+                <td><button class="num" onclick="press('.')">.</button></td>
+                <td><button class="eq" onclick="calculate()">=</button></td>
+            </tr>
+
+        </table>
+    </div>
+    <br>
+    <div class="history">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+    </div>
+
+</body>
+
+
+<!-- <body onload="init()">
+    <div class="calculator">
+        <h2> Simple Calculator </h2>
+
+        <form id="calcForm">
+            <label>Number 1</label>
+            <input type="text" id="num1" required />
+
+            <label>Number 2</label>
+            <input type="text" id="num2" required />
+
+            <label>Operator</label>
+            <select id="operator" required>
+                <option value="">Select
+                </option> <option value="+">+
+                </option> <option value="-">-
+                </option> <option value="*">*
+                </option> <option value="/">/
+                </option>
+            </select>
+
+            <button type="submit"> Calculate </button>
+        </form>
+    </div>
+</body> -->
+
+</html>
