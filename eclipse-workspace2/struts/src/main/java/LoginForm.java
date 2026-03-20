@@ -3,18 +3,33 @@ import javax.servlet.http.HttpServletRequest;
 
 public class LoginForm extends ActionForm {
     private static final long serialVersionUID = 1L;
-	private String name;
+    private String name;
     private String mobile;
     private String email;
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return name;
+    }
 
-    public String getMobile() { return mobile; }
-    public void setMobile(String mobile) { this.mobile = mobile; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {

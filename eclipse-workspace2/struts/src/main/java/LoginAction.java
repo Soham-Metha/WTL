@@ -9,7 +9,7 @@ import org.apache.struts.action.ActionMapping;
 public class LoginAction extends Action {
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
-                                 HttpServletRequest request, HttpServletResponse response) {
+            HttpServletRequest request, HttpServletResponse response) {
 
         LoginForm loginForm = (LoginForm) form;
 

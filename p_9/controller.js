@@ -1,6 +1,6 @@
 app.controller("RegisterCtrl", function ($scope, $location) {
     $scope.user = {};
-    console.log("1",$scope.user);
+    console.log("1", $scope.user);
 
     $scope.register = function () {
         console.log($scope.user);

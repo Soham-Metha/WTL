@@ -1,84 +1,68 @@
 <%@ page import="java.sql.*" %>
 
-<html>
-<head>
-<title>Student Records</title>
+    <html>
 
-<style>
-body{
-    font-family: Arial;
-    text-align:center;
-    background:#f2f2f2;
-}
+    <head>
+        <title>Student Records</title>
 
-table{
-    margin:auto;
-    border-collapse:collapse;
-    background:white;
-}
+        <style>
+            body {
+                font-family: Arial;
+                text-align: center;
+                background: #f2f2f2;
+            }
 
-th,td{
-    padding:10px;
-    border:1px solid black;
-}
+            table {
+                margin: auto;
+                border-collapse: collapse;
+                background: white;
+            }
 
-th{
-    background:#4CAF50;
-    color:white;
-}
-</style>
+            th,
+            td {
+                padding: 10px;
+                border: 1px solid black;
+            }
 
-</head>
+            th {
+                background: #4CAF50;
+                color: white;
+            }
+        </style>
 
-<body>
+    </head>
 
-<h2>Student Records</h2>
+    <body>
 
-<%
-try{
+        <h2>Student Records</h2>
 
-    Class.forName("com.mysql.cj.jdbc.Driver");
+        <% try{ Class.forName("com.mysql.cj.jdbc.Driver"); Connection
+            con=DriverManager.getConnection( "jdbc:mysql://localhost:3307/myDB" , "root" , "" ); Statement
+            stmt=con.createStatement(); ResultSet rs=stmt.executeQuery("SELECT name,email FROM wtl_p7"); %>
 
-    Connection con = DriverManager.getConnection(
-        "jdbc:mysql://localhost:3307/myDB",
-        "root",
-        ""
-    );
+            <table>
 
-    Statement stmt = con.createStatement();
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
 
-    ResultSet rs = stmt.executeQuery("SELECT name,email FROM wtl_p7");
+                <% while(rs.next()){ %>
 
-%>
+                    <tr>
+                        <td>
+                            <%= rs.getString("name") %>
+                        </td>
+                        <td>
+                            <%= rs.getString("email") %>
+                        </td>
+                    </tr>
 
-<table>
+                    <% } %>
 
-<tr>
-<th>Name</th>
-<th>Email</th>
-</tr>
+            </table>
 
-<%
-while(rs.next()){
-%>
-
-<tr>
-<td><%= rs.getString("name") %></td>
-<td><%= rs.getString("email") %></td>
-</tr>
-
-<%
-}
-%>
-
-</table>
-
-<%
-
-con.close();
-
-}catch(Exception e){
-    out.println("Database Error: " + e);
+            <% con.close(); }catch(Exception e){ out.println("Database Error: " + e);
 }
 %>
 
