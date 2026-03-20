@@ -1,0 +1,14 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="6.0">
+
+    <servlet>
+        <servlet-name>DisplayData</servlet-name>
+        <servlet-class>DisplayData</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayData</servlet-name>
+        <url-pattern>/DisplayData</url-pattern>
+    </servlet-mapping>
+
+</web-app>
